@@ -1,0 +1,111 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+section {
+    background: url(2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    background-color: #ffffff10;
+    width: 310px;
+    height: 450px;
+    position: relative;
+    padding:  45px 25px 15px 25px;
+    display: grid;
+    gap: 10px;
+    user-select: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 10px #ffffff70;
+    border-radius: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-align: right;
+    position: relative;
+    grid-column: span 4;
+    padding-right: 10px;
+}
+
+.container span {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #00000070;
+}
+
+.container span:first-of-type,
+.container span:nth-of-type(2),
+.container span:nth-of-type(3) {
+    color: #000;  
+    background-color: #ffffff70; 
+}
+
+.container span:nth-of-type(4n+0),
+.container span:nth-of-type(19) {
+    background-color: #f50f5070;
+}
+
+.container span.zero {
+    grid-column: span 2;
+    width: 140px;
+    border-radius: 50px;
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+
+@media (max-width: 1023px){
+
+    .container {
+        width: 250px;
+        height: 400px;
+        padding:  45px 50px 15px 25px;
+    }
+
+    .container span {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+}
+header {
+    text-align: center;
+    padding: 4px solid rgb(253, 31, 31);
+    border-radius: 10px;
+background-color: red;
+font-weight: bold;
+position: relative;
+animation: mymove 5s infinite;
+}
+#header {
+    {animation-timing-function: ease-in-out;}
+}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
